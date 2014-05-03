@@ -1,0 +1,3 @@
+[submodule "web/bigtop"]
+	path = web/bigtop
+	url = git://github.com/maxm/bigtop.git

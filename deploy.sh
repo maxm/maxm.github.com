@@ -1,6 +1,7 @@
 #!/bin/sh
 
+rsync -av --exclude '.git' web/ server:/var/www/max.uy/
+
 ssh server <<'ENDSSH'
-  mkdir -p /var/www/max.uy/
+  chmod -R u+rwX,go+rX,go-w /var/www/max.uy
 ENDSSH
-scp web/* server:/var/www/max.uy/
